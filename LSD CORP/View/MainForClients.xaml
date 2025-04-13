@@ -1,0 +1,41 @@
+﻿<Window x:Class="LSD_CORP.View.MainForClients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LSD_CORP.View"
+        mc:Ignorable="d"
+        Title="MainForClients" WindowStartupLocation="CenterScreen" Background="Azure" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button Content="Add" Margin="5" Click="AddClick"/>
+            <Button Content="Edit" Margin="5" Click="EditClick"/>
+            <Button Content="Delete" Margin="5" Click="DelClick"/>
+            <Button Content="Back" Margin="5" Click="BackClick"/>
+            <Button Content="Dupe (Onle for testers)" Margin="5" Click="DupeClick"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <ListView ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient}" Margin="20">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding Name}" Header="Name"/>
+                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding Surname}" Header="Surname"/>
+                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding Patronymic}" Header="Patronymic"/>
+                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding Address}" Header="Address"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

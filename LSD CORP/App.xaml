@@ -1,0 +1,9 @@
+﻿<Application x:Class="LSD_CORP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LSD_CORP"
+             StartupUri="View/LoginForm.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

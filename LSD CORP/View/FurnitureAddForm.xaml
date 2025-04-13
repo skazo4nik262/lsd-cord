@@ -1,0 +1,58 @@
+﻿<Window x:Class="LSD_CORP.View.FurnitureAddForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LSD_CORP.View"
+        mc:Ignorable="d"
+        Title="FurnitureAddForm" Background="Azure" Height="500" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button Content="Save" Margin="5" Click="SaveClick"/>
+            <Button Content="Back" Margin="5" Click="BackClick"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <StackPanel Margin="25, 10">
+                <Label Content="Title"/>
+                <TextBox Text="{Binding Furniture.Title}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 10">
+                <Label Content="Client"/>
+                <ComboBox ItemsSource="{Binding Clients}" SelectedItem="{Binding Furniture.Client}"/>
+            </StackPanel>
+            
+            <StackPanel Margin="25, 10">
+                <Label Content="Material"/>
+                <ComboBox ItemsSource="{Binding Materials}" SelectedItem="{Binding Furniture.Material}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 10">
+                <Label Content="Mat Count"/>
+                <TextBox Text="{Binding Furniture.MaterialCount}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 10">
+                <Label Content="Sell cost"/>
+                <TextBox Text="{Binding Furniture.SelCost}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 10">
+                <Label Content="Make cost"/>
+                <TextBox Text="{Binding Furniture.MakeCost}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

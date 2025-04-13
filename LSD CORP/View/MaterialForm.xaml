@@ -1,0 +1,43 @@
+﻿<Window x:Class="LSD_CORP.View.MaterialForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LSD_CORP.View"
+        mc:Ignorable="d"
+        Title="MaterialForm" Background="Azure" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button Content="Save" Margin="5" Click="SaveClick"/>
+            <Button Content="Back" Margin="5" Click="BackClick"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <StackPanel Margin="25, 20">
+                <Label Content="Title"/>
+                <TextBox Text="{Binding Material.Title}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 20">
+                <Label Content="BuyCost"/>
+                <TextBox Text="{Binding Material.BuyCost}"/>
+            </StackPanel>
+
+            <StackPanel Margin="25, 20">
+                <Label Content="Description"/>
+                <TextBox Text="{Binding Material.Description}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
